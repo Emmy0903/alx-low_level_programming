@@ -10,7 +10,7 @@ int main(void)
 
 	int d;
 
-	c = 'a';
+	c = 'A';
 	d = '0';
 	while
 		(d < 10) {
@@ -18,7 +18,7 @@ int main(void)
 			d++;
 		}
 	while
-		(c <= 'f') {
+		(c <= 'F') {
 			putchar(c);
 			c++;
 		}
