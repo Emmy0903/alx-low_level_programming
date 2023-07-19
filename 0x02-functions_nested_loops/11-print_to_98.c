@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * print_to_98 - Print all natural numbers from n to 98
- * @n: The last number afteer printing
+ * @n: The last number after printing
  * Return: Always 0
  */
 
@@ -12,29 +12,32 @@ void print_to_98(int n)
 	{
 		for (; n <= 98; n++)
 		{
-			if (n != 98)
+			if (n == 98)
 			{
 				printf("%d", n);
+				printf("\n");
+				break;
 			}
-			else if (n == 98)
+			else
 			{
-				printf("%d\n", n);
+				printf("%d, ", n);
 			}
 		}
 	}
 	else
-		if (n >= 98)
+	{
+		for (; n >= 98; n--)
 		{
-			for (; n >= 98; n--)
+			if (n == 98)
 			{
-				if (n != 98)
-				{
-					printf("%d", n);
-				}
-				else if (n == 98)
-				{
-					printf("%d\n", n);
-				}
+				printf("%d", n);
+				printf("\n");
+				break;
+			}
+			else
+			{
+				printf("%d, ", n);
 			}
 		}
+	}
 }
