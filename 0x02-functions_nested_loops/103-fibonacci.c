@@ -6,24 +6,19 @@
 
 int main(void)
 {
-	long a = 0, b = 1, c;
-	float total_sum;
+	long a = 0, b = 1, c = b;
 
-	while (1)
+	while (b + a < 4000000)
 	{
-		c = a + b;
+		b += a;
 
-		if (c < 4000000)
-		{
-			break;
-		}
-		if ((c % 2) == 0)
-		{
-			total_sum += c;
-		}
-		a = b;
-		b = c;
+		if (b % 2 == 0)
+			c += b;
+
+		a = b - a;
+
+		++i;
 	}
-	printf("%.0f\n". total_sum);
+	printf("%ld\n", c);
 	return (0);
 }
