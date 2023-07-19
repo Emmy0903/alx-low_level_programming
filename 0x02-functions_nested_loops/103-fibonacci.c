@@ -1,4 +1,5 @@
 #include "main.h"
+#include "stdio.h"
 /**
  * main -Entry point
  * Return: Always 0 (success)
@@ -6,7 +7,7 @@
 
 int main(void)
 {
-	int 1 = 0;
+	int i = 0;
 	long j = 1, k = 2, sum = k;
 
 	while (k + j < 4000000)
