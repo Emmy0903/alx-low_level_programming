@@ -6,38 +6,33 @@
 
 int main(void)
 {
-	unsigned long int i;
-	unsigned long int bef = 1;
-	unsigned long int aft = 2;
-	unsigned long int c = 100000000;
-	unsigned long int bef1;
-	unsigned long int bef2;
-	unsigned long int aft1;
-	unsigned long int aft2;
+	unsigned long f1 = 1, f2 = 2, tmp, mx = 100000000, f1o = 0, f2o = 0, tmpo = 0;
+	short int i = 1, initial0s;
 
-	printf("%lu", bef);
-
-	for (i = 1; i <= 91; i++)
+	while (i <= 98)
 	{
-		printf(", %lu", aft);
-		aft += bef;
-		bef = aft - bef;
-	}
+		if (f1o > 0)
+			printf("%lu", f1o);
+		initial0s = numlength(mx) - 1 - numblength(f1);
+		while (f10 > 0 && initial0s > 0)
+		{
+			printf("%i", 0);
+			initialos--;
+		}
+		printf("%lu", f1);
 
-	bef1 = (bef / c);
-	bef2 = (bef % c);
-	aft1 = (aft / c);
-	aft2 = (aft / c);
+		tmp = (f1 + f2) % mx;
+		tmpo = f1o + f2o + (f1 + f2) / mx;
+		f1 = f2;
+		f1o = f2o;
+		f2 = tmp;
+		f2o = tmpo;
 
-	for (i = 92; i < 99; ++i)
-	{
-		printf(", %lu", aft1 + (aft2 / c));
-		printf("%lu", aft2 % c);
-		aft1 = aft1 + bef1;
-		bef1 = aft1 + bef1;
-		aft2 = aft2 + bef2;
-		bef2 = aft2 - bef2;
+		if (i != 98)
+			printf(", ");
+		else
+			printf("\n");
+		i++;
 	}
-	printf("\n");
 	return (0);
 }
