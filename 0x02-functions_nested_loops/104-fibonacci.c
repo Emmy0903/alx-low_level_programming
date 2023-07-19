@@ -13,11 +13,11 @@ int main(void)
 	{
 		if (f1o > 0)
 			printf("%lu", f1o);
-		initial0s = numlength(mx) - 1 - numblength(f1);
-		while (f10 > 0 && initial0s > 0)
+		initial0s = numlength(mx) - 1 - numlength(f1);
+		while (f1o > 0 && initial0s > 0)
 		{
 			printf("%i", 0);
-			initialos--;
+			initial0s--;
 		}
 		printf("%lu", f1);
 
