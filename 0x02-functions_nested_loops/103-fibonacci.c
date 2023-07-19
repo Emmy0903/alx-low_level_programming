@@ -6,19 +6,20 @@
 
 int main(void)
 {
-	long a = 0, b = 1, c = b;
+	int 1 = 0;
+	long j = 1, k = 2, sum = k;
 
-	while (b + a < 4000000)
+	while (k + j < 4000000)
 	{
-		b += a;
+		k += j;
 
-		if (b % 2 == 0)
-			c += b;
+		if (k % 2 == 0)
+			sum += k;
 
-		a = b - a;
+		j = k - j;
 
 		++i;
 	}
-	printf("%ld\n", c);
+	printf("%ld\n", sum);
 	return (0);
 }
