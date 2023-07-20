@@ -1,19 +1,40 @@
 #include <stdio.h>
 /**
- * main - Print the first 98 Fibonacci numbers
+ * numlength - Returns the length of string
+ * @num: operand number
+ * Return: number of digits
+ */
+
+int numlength(int num)
+{
+	int length = 0;
+
+	if (!num)
+	{
+		return (1);
+	}
+	while (num)
+	{
+		num = num / 10;
+		length += 1;
+	}
+	return (length);
+}
+/**
+ * main - Prints the first 98 fibonacci
  * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	unsigned long f1 = 1, f2 = 2, tmp, mx = 1000000000, f1o = 0, f2o = 0, tmpo = 0;
+	unsigned long f1 = 1, f2 = 2, tmp, mx = 100000000, f1o = 0, f2o = 0, tmpo = 0;
 	short int i = 1, initial0s;
 
 	while (i <= 98)
 	{
 		if (f1o > 0)
 			printf("%lu", f1o);
-		initial0s = mx - 1 - f1;
+		initial0s = numlength(mx) - 1 - numlength(f1);
 		while (f1o > 0 && initial0s > 0)
 		{
 			printf("%i", 0);
