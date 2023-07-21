@@ -1,6 +1,7 @@
 #include "main.h"
 /**
  * print_triangle - entry point
+ * @size: size of the triangle
  * Return: Always 0
  */
 
