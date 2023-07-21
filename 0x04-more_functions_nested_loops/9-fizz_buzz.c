@@ -11,17 +11,17 @@ int main(void)
 
 	for (a = 1; a <= 100; a++)
 	{
-		if (a % 3 == 0)
-			printf("Fizz");
-		else if (a % 5 == 0)
-			printf("Buzz");
-		else if (a % 15 == 0)
-			printf("FizzBuzz");
+		if (a == 1)
+			printf("%d", a);
+		else if (a % 3 == 0 && a % 5 != 0)
+			printf("%s", " Fizz");
+		else if (a % 5 == 0 && a % 3 != 0)
+			printf("%s", " Buzz");
+		else if (a % 3 == 0 && a % 5 == 0)
+			printf("%s", " FizzBuzz");
 		else
-			printf("%a", a);
-		if (a < 100)
-			printf(' ');
+			printf(" %d", a);
 	}
-	printf('\n');
+	printf("\n");
 	return (0);
 }
